@@ -1,0 +1,59 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<meta name="robots" content="noindex, nofollow">
+<title>Checkout · One of Ours</title>
+<meta name="description" content="One of Ours: premium, freshly cooked meals for the pets we love. Delivered across Bengaluru.">
+<link rel="icon" href="assets/favicon.svg" type="image/svg+xml">
+<link rel="preconnect" href="https://fonts.googleapis.com"><link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Caveat:wght@500&family=Merriweather:wght@400;700;900&display=swap">
+<link rel="stylesheet" href="assets/style.css">
+<script src="assets/app.js" defer></script>
+</head>
+<body data-page="checkout">
+<div id="site-head"></div>
+<main>
+  <div class="page-head"><div class="wrap"><div class="crumbs"><a href="cart.html">Cart</a> / Checkout</div><h1 style="font-size:clamp(36px,5vw,60px)">Checkout</h1></div></div>
+  <div class="wrap">
+    <form class="cart-grid" id="co-form" novalidate>
+      <div>
+        <div class="mock-note"><span><svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="#A94E2C" stroke-width="1.8" stroke-linecap="round"><circle cx="12" cy="12" r="9"/><path d="M12 11v6M12 7.5v.5"/></svg></span><span><b>Test checkout.</b> This page simulates payment. No money moves and nothing you type leaves your browser.</span></div>
+        <div class="co-step">
+          <h2><span class="n">1</span>Contact</h2>
+          <div class="form-grid">
+            <label class="field">Full name<input id="fname" required autocomplete="name"></label>
+            <label class="field">Mobile number<input id="phone" required inputmode="tel" placeholder="98765 43210" autocomplete="tel"></label>
+            <label class="field full">Email<input type="email" autocomplete="email" placeholder="Optional, for your receipt"></label>
+          </div>
+        </div>
+        <div class="co-step">
+          <h2><span class="n">2</span>Delivery address</h2>
+          <div class="form-grid">
+            <label class="field full">Flat, house, building<input required autocomplete="address-line1"></label>
+            <label class="field full">Street, area, landmark<input required autocomplete="address-line2"></label>
+            <label class="field">City<select autocomplete="address-level2"><option>Bengaluru</option></select></label>
+            <label class="field">PIN code<input id="pin" required inputmode="numeric" maxlength="6" placeholder="560001" autocomplete="postal-code"></label>
+            <label class="field full">Pet’s name (optional)<input placeholder="So we can write it on the box"></label>
+          </div>
+        </div>
+        <div class="co-step">
+          <h2><span class="n">3</span>Payment</h2>
+          <div class="pay-tabs">
+            <button type="button" class="opt" data-m="upi"><b>UPI</b><small>GPay, PhonePe</small></button>
+            <button type="button" class="opt" data-m="card"><b>Card</b><small>Credit / debit</small></button>
+            <button type="button" class="opt" data-m="qr"><b>QR</b><small>Scan to pay</small></button>
+            <button type="button" class="opt" data-m="cod"><b>On delivery</b><small>Cash / UPI</small></button>
+          </div>
+          <div class="pay-panel" id="pay-panel"></div>
+          <button class="btn block" id="pay-btn" type="submit" style="margin-top:22px"><svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"><rect x="5" y="11" width="14" height="9" rx="2"/><path d="M8 11V8a4 4 0 0 1 8 0v3"/></svg> <span id="pay-label">Pay</span>&nbsp;<span id="pay-amt"></span></button>
+        </div>
+      </div>
+      <aside class="summary" id="co-summary"></aside>
+    </form>
+  </div>
+</main>
+<div class="overlay" role="alert"><div><div class="spinner"></div><div class="hand" style="font-size:36px">Processing your test payment…</div></div></div>
+<div id="site-foot"></div>
+</body></html>
